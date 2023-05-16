@@ -28,7 +28,23 @@
 'use strict';
 
 function unique(arr) {
-  // YOUR WORK HERE
+  // Variables
+  const fc = {};
+  const result = [];
+  let i = 0;
+  let key;
+
+  for (i; i < arr.length; i++) {
+    if (!fc[arr[i]]) {
+      fc[arr[i]] = true;
+    }
+  }
+
+  for (key in fc) {
+    result.push(key);
+  }
+
+  return result;
 }
 
 
