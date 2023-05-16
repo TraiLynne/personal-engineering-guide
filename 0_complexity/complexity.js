@@ -214,17 +214,17 @@ function factorial(n) {
 /*
  *  First Times Last
  *
- *  Time Complexity:
- *  Auxiliary Space Complexity:
+ *  Time Complexity: O(1) -> we aren't going through the entire array. We know the index of the values we want and we are doing a multiplication then returning it. All constant time actions
+ *  Auxiliary Space Complexity: O(1) -> we are just returning a value not really creating anything structure-wise.
  */
 
-function firstTimesLast(arr) {
-  let result = null;
-  if (arr.length < 2) {
+function firstTimesLast(arr) { // N
+  let result = null; // 1
+  if (arr.length < 2) { // 1
     return result;
   }
-  result = arr[0] * arr[arr.length - 1];
-  return result;
+  result = arr[0] * arr[arr.length - 1]; // 1
+  return result; // 1
 }
 
 /*
