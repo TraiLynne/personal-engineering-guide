@@ -166,8 +166,8 @@ function merge(arr1, arr2) {
  *    [5, 7, 10, 12, 14], 7 --> 1
  *    [2, 4, 8, 9, 15], 3 --> -1
  *
- *   Time Complexity:
- *   Auxiliary Space Complexity:
+ *   Time Complexity: O(log(N)) -> Time is split inn half with each go
+ *   Auxiliary Space Complexity: O(1) -> it is only returning the index and not creating any new structures
  */
 
 function binarySearch(arr, val) {
