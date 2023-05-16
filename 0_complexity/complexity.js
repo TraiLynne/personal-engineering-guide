@@ -200,15 +200,15 @@ function binarySearch(arr, val) {
  *    1 --> 1 (1)
  *    9 --> 362880 (9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1)
  *
- *    Time Complexity:
- *    Auxiliary Space Complexity:
+ *    Time Complexity: O(N) -> depends on how big N is.
+ *    Auxiliary Space Complexity: O(N) -> It's returning a new piece of data. The amount it returns depends on how big N is.
  */
 
 function factorial(n) {
-  if (n === 1) {
+  if (n === 1) { // N
     return 1;
   }
-  return n * factorial(n - 1);
+  return n * factorial(n - 1); // * N?
 }
 
 /*
