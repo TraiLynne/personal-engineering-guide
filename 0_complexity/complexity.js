@@ -74,18 +74,18 @@ function indexOf(arr, target) {
  *     [9, 83, 74] --> [74]
  *     [6, 4, 7, 9, 7, 8, 2, 4, 3] --> [6, 4, 8, 2, 4]
  *
- *     Time Complexity:
- *     Auxiliary Space Complexity:
+ *     Time Complexity: O(N) -> Depends oon the length of the array
+ *     Auxiliary Space Complexity: O(N) -> if all the elements are even, then it will return a new array of the same length
  */
 
 function evens(arr) {
-  var results = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 === 0) {
-      results.push(arr[i]);
+  var results = []; // 1
+  for (let i = 0; i < arr.length; i++) { // N
+    if (arr[i] % 2 === 0) { // + 1
+      results.push(arr[i]); // + 1
     }
   }
-  return results;
+  return results; // could be up to N
 }
 
 /*
