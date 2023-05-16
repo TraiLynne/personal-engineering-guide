@@ -102,16 +102,16 @@ function evens(arr) {
  *    [0, 1, -1] --> 0
  *    [] --> 0
  *
- *    Time Complexity:
- *    Auxiliary Space Complexity:
+ *    Time Complexity: O(N) -> due to loop and it has to go all the way through, there is no way around it
+ *    Auxiliary Space Complexity: O(1) -> it creates a variable and replaces it's value then returns just the variable. It's a constant amount of space.
  */
 
 function sum(arr) {
-  let total = 0;
-  for (let i = 0; i < arr.length; i++) {
-    total += arr[i];
+  let total = 0; // 1
+  for (let i = 0; i < arr.length; i++) { // N
+    total += arr[i]; // + 1
   }
-  return total;
+  return total; // 1
 }
 
 /*
