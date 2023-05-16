@@ -231,17 +231,17 @@ function firstTimesLast(arr) { // N
  *  Most Frequent Occurrence
  *  NOTE: The string only contains letters in it
  *
- *  Time Complexity:
- *  Auxiliary Space Complexity:
+ *  Time Complexity: O(N) -> It all depends on how long N is. The loops aren't nested so it's addition instead of multiplication
+ *  Auxiliary Space Complexity: O(1)
  */
 
-function mostFrequentOccurrence(str) {
-  const lowerString = str.toLowerCase();
-  let letters = {};
-  let mostFrequent;
+function mostFrequentOccurrence(str) { // This is N
+  const lowerString = str.toLowerCase(); // N
+  let letters = {}; // 1
+  let mostFrequent; // 1
 
-  for (let i = 0; i < lowerString.length; i++) {
-    let char = str[i].toLowerCase();
+  for (let i = 0; i < lowerString.length; i++) { // N
+    let char = str[i].toLowerCase(); // 1
     if (letters[char]) {
       letters[char]++;
     } else {
