@@ -74,7 +74,25 @@ function unique(arr) {
  */
 
 function wordCount(sentence) {
-  // YOUR WORK HERE
+  // variables
+  const fc = {};
+  const results = [];
+  sentence = sentence.split(" ");
+
+  for (let i = 0; i < sentence.length; i++) {
+    sentence[i] = sentence[i].toLowerCase().replace(/[^a-zA-Z]/g, "");
+    console.log(sentence[i]);
+
+    if (!fc[sentence[i]]) {
+      fc[sentence[i]] = true;
+    }
+  }
+
+  for (key in fc) {
+    results.push(key);
+  }
+
+  return results;
 }
 
 
