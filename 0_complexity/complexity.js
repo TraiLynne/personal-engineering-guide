@@ -47,17 +47,17 @@ Reduce the following into it's Big-O order of magnitude.
  *     [9, 83, 74], 8 --> -1
  *     [6, 4, 7, 9, 7, 8, 2, 4, 3], 7 --> 2
  *
- *     Time Complexity:
- *     Auxiliary Space Complexity:
+ *     Time Complexity: O(N) -> depends on the length of the array
+ *     Auxiliary Space Complexity: O(1) -> not making a new array, just returning the index or -1
  */
 
 function indexOf(arr, target) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === target) {
-      return i;
+  for (let i = 0; i < arr.length; i++) { // N
+    if (arr[i] === target) { // + 1
+      return i; // +1
     }
   }
-  return -1;
+  return -1; // +1
 }
 
 /*
