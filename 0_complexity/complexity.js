@@ -276,17 +276,17 @@ function printUnorderedPairs(array) {
 /*
  *  Make Combined Matrix
  *
- *  Time Complexity:
- *  Auxiliary Space Complexity:
+ *  Time Complexity: O(MN)
+ *  Auxiliary Space Complexity: O(MN)
  */
 
-function makeCombinedMatrix(arr1, arr2) {
+function makeCombinedMatrix(arr1, arr2) { // M & N
   let result = [];
   let row;
 
-  for (let i = 0; i < arr1.length; i++) {
+  for (let i = 0; i < arr1.length; i++) { // M
     row = [];
-    for (let j = 0; j < arr2.length; j++) {
+    for (let j = 0; j < arr2.length; j++) { // (*) N
       row.push(arr1[i] + arr2[j]);
     }
     result.push(row);
