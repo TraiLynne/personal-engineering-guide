@@ -229,7 +229,17 @@ function missingNumber(n, arr) {
  */
 
 function letterSort(string) {
-  // YOUR WORK HERE
+  // variables
+  let fc = new Array(26).fill(0);
+  let sortedString = "";
+
+  for (let c = 0; c < string.length; c++) {
+    fc[string[c].charCodeAt() - 97] += 1;
+  }
+  for (let i = 0; i < fc.length; i++) {
+    sortedString += String.fromCharCode(97 + i).repeat(fc[i]);
+  }
+  return sortedString;
 }
 
 
