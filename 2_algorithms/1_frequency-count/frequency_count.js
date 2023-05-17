@@ -183,7 +183,28 @@ function rgb(string) {
  */
 
 function missingNumber(n, arr) {
-  // YOUR WORK HERE
+  // Variables
+  let fc = {};
+  let i = 0;
+  const result = [];
+
+  for (i; i < arr.length || i <= n; i++) {
+    if (i > 0 && !fc[i]) {
+      fc[i] = false;
+    }
+
+    if (arr[i]) {
+      fc[arr[i]] = true;
+    }
+  }
+
+  for (key in fc) {
+    if (fc[key] !== true) {
+      result.push(Number(key));
+    }
+  }
+
+  return result;
 }
 
 
