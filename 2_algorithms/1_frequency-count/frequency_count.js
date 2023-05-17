@@ -118,7 +118,45 @@ function wordCount(sentence) {
  */
 
 function rgb(string) {
-  // YOUR WORK HERE
+  // Variables
+  const fc = {
+    r: 0,
+    g: 0,
+    b: 0,
+  };
+  let result;
+  let i = 0;
+
+  console.log(string);
+
+  for (i; i < string.length; i++) {
+    let key = string[i];
+    fc[key] ? (fc[key] += 1) : (fc[key] = 1);
+  }
+
+  // if(fc["r"] < fc["g"]){
+  // 	if(fc["r"] < fc["b"]){
+  // 		result = fc["r"]
+  // 	} else {
+  // 		result = fc["b"]
+  // 	}
+  // } else {
+  // 	if(fc["g"] < fc["b"]){
+  // 		result = fc["g"]
+  // 	} else {
+  // 		result = fc["b"]
+  // 	}
+  // }
+
+  fc["r"] < fc["g"]
+    ? fc["r"] < fc["b"]
+      ? (result = fc["r"])
+      : (result = fc["b"])
+    : fc["g"] < fc["b"]
+    ? (result = fc["g"])
+    : (result = fc["b"]);
+
+  return result;
 }
 
 
